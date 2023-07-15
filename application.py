@@ -2,12 +2,10 @@ from flask import Flask,request,render_template,jsonify
 from src.pipeline.prediction_pipeline import CustomData,PredictPipeline
 from logging import FileHandler,WARNING
 
-application=Flask(__name__, template_folder = 'template')
+application=Flask(__name__)
 
 app=application
 
-file_handler = FileHandler('errorlog.txt')
-file_handler.setLevel(WARNING)
 
 #def home_page():
 #    return render_template('index.html')
